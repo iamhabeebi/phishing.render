@@ -6,8 +6,8 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# ✅ Replace this with your actual Google Drive file ID
-FILE_ID = "https://drive.google.com/file/d/1OsZMd9t3m7EJJtunH3mrhZklbIFY5-yw/view?usp=sharing"
+# ✅ Read Google Drive File ID from Environment Variables
+FILE_ID = os.getenv("Google_Drive_File_ID")
 MODEL_PATH = "optimized_phishing_model.pkl"
 
 # ✅ Function to download model from Google Drive
